@@ -28,7 +28,7 @@ const Navbar = () => {
       <div className="grid h-16 w-full grid-cols-3 items-center px-8">
         
         <div className="flex justify-start">
-          <NavLink to="/" className="flex cursor-pointer items-center gap-3">
+          <NavLink to="/quizzes" className="flex cursor-pointer items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary shadow-sm transition-transform duration-200 hover:scale-105">
               <Layers className="h-5 w-5 text-primary-foreground" />
             </div>
