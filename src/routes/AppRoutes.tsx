@@ -1,22 +1,15 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 import MainLayout from "@/layouts/MainLayout"
-
 import LoginPage from "@/pages/LoginPage"
 import RegisterPage from "@/pages/RegisterPage"
-import DashboardPage from "@/pages/DashboardPage"
 import UnauthorizedPage from "@/pages/UnauthorizedPage"
-
 import QuestionListPage from "@/pages/questions/QuestionListPage"
 import CreateQuestionPage from "@/pages/questions/CreateQuestionPage"
-
 import QuizListPage from "@/pages/quizzes/QuizListPage"
 import CreateQuizPage from "@/pages/quizzes/CreateQuizPage"
 import AttemptQuizPage from "@/pages/quizzes/AttemptQuizPage"
-
 import AttemptHistoryPage from "@/pages/attempts/AttemptHistoryPage"
 import AttemptDetailsPage from "@/pages/attempts/AttemptDetailsPage"
-
 import ProtectedRoute from "./ProtectedRoute"
 import PublicRoute from "./PublicRoute"
 import PermissionRoute from "./PermissionRoute"
@@ -36,7 +29,7 @@ const AppRoutes = () => {
 
         <Route element={<ProtectedRoute />}>
           <Route element={<MainLayout />}>
-            <Route path="/" element={<DashboardPage />} />
+            <Route path="/" element={<Navigate to="/quizzes" replace />} />
 
             <Route
               path="/questions"
